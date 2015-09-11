@@ -1,0 +1,282 @@
+
+
+/*Reset margins/paddings and use borderbox*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;    
+  	box-sizing: border-box;
+}
+
+/*General Styles*/
+body {
+	font-family: Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.7em;
+}
+
+/*Sidebar formatting*/
+.sidebar {
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: -175px;
+	height: 100%;
+	width: 175px;
+	background: #633393;
+	padding: 30px 20px 0 0;
+}
+	.sidebar ul {
+		margin-bottom: 20px;
+	}
+	.sidebar ul li {
+		list-style: none;
+	}
+	.sidebar ul li:first-child {
+		color: rgba(255,255,255,0.7);
+		list-style: none;
+		font-family: Montserrat, sans-serif;
+		font-size: 1.2em;
+		cursor: pointer;
+		text-align: right;	
+	}
+	.sidebar ul li:nth-child(n+2) {
+		font-size: .8em;
+		color: rgba(255,255,255,0.7);
+		list-style: none;
+		margin: 5px 20px 0 0;
+		text-align: right;
+	}
+		.sidebar ul li a:link, .sidebar ul li a:visited {
+			color: rgba(255,255,255,0.7);
+			text-decoration: none;
+		}
+		.sidebar ul li a:hover {
+			color: rgba(255,255,255,1)
+		}
+.sidebar-button {
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+	z-index: 1;
+	position: fixed;
+	padding: 10px 10px;
+	font-size: 1.5em;
+	left: 25px;
+	top: 15px;
+	background: #633393;
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;     
+	-ms-user-select: none;   
+	user-select: none;
+	
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	
+	border-radius: 5px;
+}
+#toggle {
+	display: none;
+}
+
+#toggle:checked + .sidebar-button {
+	left: 195px;
+}
+
+#toggle:checked ~ .sidebar {
+	left: 0px;
+}
+
+
+/*Mobile Header formatting*/
+#header {
+	min-width: 100%;
+	background-color: #633393;
+	padding: 0 20px;
+}
+	#header .header-logo {
+		width: 100px;
+		display: block;
+		padding: 60px 0 25px 0;
+	}
+	#header .title-wrapper {
+		display: block;
+		padding: 25px 0 70px 0;
+		max-width: 250px;
+	}
+		#header .title-wrapper .school {
+			font-family: Montserrat, Arial, sans-serif;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: white;
+			font-size: 1.5em;
+			line-height: 1.4em;
+			text-align: left;
+		}
+
+/*Content*/
+.main {
+	min-width: 100%;
+	padding: 20px 20px;
+	background: white;
+	overflow: auto;
+}
+	/*Headings and paragraphs*/
+	.main h1 {
+		font-family: Montserrat, Arial, sans-serif;
+		font-weight: 700;
+		color: #633393;
+		font-size: 2em;
+		padding: 25px 0px;	
+	}
+	.main h3 {
+		font-family: Montserrat, Arial, sans-serif;
+		font-weight: 400;
+		color: #633393;
+		font-size: 1.3em;
+		padding: 15px 0px;	
+	}
+	.main p {
+		padding: 10px 0;
+	}
+	
+	/*List formatting*/
+	
+	.main ul,ol {
+		padding: 10px 0 10px 30px;
+	}
+		.main li {
+			margin: 5px 0px;
+		}
+		.main ul li {
+			list-style: square outside none;
+		}
+		.main .label {
+			color: white;
+			padding: 2px 6px;
+			margin-right: 5px;
+			background-color: #633393;
+		}
+		.main ul li:first-child {
+			margin: 0 0 10px 0;
+			list-style: none;
+			color: #633393;
+			font-size: 1.1em;
+		}
+	/*Link formatting*/
+	
+	.main a:link, a:visited {
+		color: #633393;
+		text-decoration: none;
+	}
+	.main a:hover {
+		border-bottom: 1px solid #633393;
+	}
+	
+	/*Classes Section Formatting*/
+	
+	.main .class {
+		padding: 20px 20px;
+		margin: 30px 0;
+		max-width: 100%;
+		overflow: auto;
+		border: 1px solid #633393;
+	}
+		/*Book picture and buy button formatting*/
+		.main .class .book {
+			overflow: auto;
+			width: 100%;
+		}
+			.main .class .book img {
+				width: 100%;
+			}
+			.main .class .book a:link, .main .class .book a:visited {
+				display: block;
+				padding: 5px 0;
+				margin-top: 5px;
+				color: white;
+				width: 100%;
+				text-align: center;
+				background-color: #633393;
+			}
+			.main .class .book a:hover {
+				border: none;
+				background-color: #42337E;
+			}
+		/*Class information formatting*/
+		.main .class .information {
+			width: 100%;
+		}
+			.main .class .information p {
+				padding: 5px 0;
+			}
+			.main .class .information .class-title {
+				font-family: Montserrat, Arial, sans-serif;
+				font-weight: 400;
+				font-size: 1.4em;
+				line-height: 1.2em;
+				color: #633393;
+				margin: 20px 0 15px 0;
+			}
+			
+@media screen and (min-width: 700px) {
+	.main {
+		padding: 20px 100px;
+	}
+	#header .header-wrap {
+		padding: 0 100px;
+	}
+	#header {
+		padding: 0 0;
+	}
+	.main .class .book {
+		width: 34%;
+		display: inline-block;
+	}
+	.main .class .information {
+		width: 65%;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 25px;
+	}
+		.main .class .information .class-title {
+			margin: 0 0 15px 0;
+		}
+	.sidebar {
+		width: 250px;
+		left: -250px;
+		padding: 30px 30px 0 10px;
+	}
+		#toggle:checked + .sidebar-button {
+			left: 275px;
+		}
+}
+
+
+@media screen and (min-width: 1000px) {
+	.main {
+		margin: 0 auto;
+		max-width: 950px;
+		min-width: 0;
+	}
+	#header .header-wrap {
+		padding: 0 100px;
+		overflow: auto;
+		max-width: 950px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+
+
+
+
